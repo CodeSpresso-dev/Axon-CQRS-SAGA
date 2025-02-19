@@ -7,4 +7,4 @@
 #### Spring Cloud Version : 2024.0.0
 
 ### Discovery Server
-#### The DiscoveryServer is typically a Spring Cloud Eureka Server used for service discovery in a microservices architecture. It helps different services register themselves and discover other services dynamically.
+#### The DiscoveryServer is typically a Spring Cloud Eureka Server used for service discovery in a microservice architecture. It helps different services register themselves and discover other services dynamically.
