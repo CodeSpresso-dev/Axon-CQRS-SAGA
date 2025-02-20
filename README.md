@@ -29,5 +29,5 @@
 #### You can manually download the Axon Server JAR file or Docker image from: [AxonServer](https://www.axoniq.io/download)
 #### The following Docker command allows you to pull the image and run it in a containerized environment
 ~~~
-docker run --name axonserver -p 8024:8024 -p 8124:8124 -v "[YourLocalPath]/data":/data -v "[YourLocalPath]/eventdata:/eventdata -v "[YourLocalPath]/config:/config axoniq/axonserver
+docker run --name axonserver -p 8024:8024 -p 8124:8124 -v "[YourLocalPath]/data":/data -v "[YourLocalPath]/eventdata":/eventdata -v "[YourLocalPath]/config":/config axoniq/axonserver
 ~~~
