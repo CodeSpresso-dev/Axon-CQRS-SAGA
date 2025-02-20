@@ -1,10 +1,17 @@
 package mehdi.sample.edd.estore.productservice.controller;
 
+import org.springframework.core.env.Environment;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/products") // http://localhost:8080/products
 public class ProductsController {
+
+    private final Environment environment;
+
+    public ProductsController(Environment environment) {
+        this.environment = environment;
+    }
 
     @PostMapping
     public String createProduct(){
@@ -13,7 +20,7 @@ public class ProductsController {
 
     @GetMapping
     public String getProduct(){
-        return "Http Get Handed";
+        return "Http Get Handled on service port " + environment.getProperty("local.server.port");
     }
 
     @PutMapping
