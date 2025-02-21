@@ -38,18 +38,18 @@ public class ProductsController {
         return returnValue;
     }
 
-    @GetMapping
-    public String getProduct() {
-        return "Http Get Handled on service port " + environment.getProperty("local.server.port");
-    }
-
-    @PutMapping
-    public String updateProduct() {
-        return "Http Put Handed";
-    }
-
-    @DeleteMapping
-    public String deleteProduct() {
-        return "Http Delete Handed";
-    }
+//    @GetMapping
+//    public String getProduct() {
+//        return "Http Get Handled on service port " + environment.getProperty("local.server.port");
+//    }
+//
+//    @PutMapping
+//    public String updateProduct() {
+//        return "Http Put Handed";
+//    }
+//
+//    @DeleteMapping
+//    public String deleteProduct() {
+//        return "Http Delete Handed";
+//    }
 }
