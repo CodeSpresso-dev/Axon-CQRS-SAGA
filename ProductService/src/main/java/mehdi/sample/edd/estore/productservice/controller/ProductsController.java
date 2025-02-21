@@ -1,5 +1,6 @@
 package mehdi.sample.edd.estore.productservice.controller;
 
+import jakarta.validation.Valid;
 import mehdi.sample.edd.estore.productservice.command.CreateProductCommand;
 import mehdi.sample.edd.estore.productservice.model.Product;
 import org.axonframework.commandhandling.gateway.CommandGateway;
@@ -21,7 +22,7 @@ public class ProductsController {
     }
 
     @PostMapping
-    public String createProduct(@RequestBody Product product) {
+    public String createProduct(@Valid @RequestBody Product product) {
 
         CreateProductCommand createProductCommand = CreateProductCommand.builder()
                 .title(product.title())
