@@ -5,6 +5,7 @@ import mehdi.sample.edd.estore.productservice.core.data.ProductRepository;
 import mehdi.sample.edd.estore.productservice.core.events.ProductCreatedEvent;
 import org.axonframework.config.ProcessingGroup;
 import org.axonframework.eventhandling.EventHandler;
+import org.axonframework.messaging.interceptors.ExceptionHandler;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Component;
 
@@ -18,8 +19,13 @@ public class ProductEventHandler {
         this.productRepository = productRepository;
     }
 
+    @ExceptionHandler(resultType = Exception.class)
+    public void handle(Exception exception) throws Exception {
+        throw exception;
+    }
+
     @EventHandler
-    public void on(ProductCreatedEvent event){
+    public void on(ProductCreatedEvent event) throws Exception {
         ProductEntity productEntity = new ProductEntity();
         BeanUtils.copyProperties(event, productEntity);
         productRepository.save(productEntity);
