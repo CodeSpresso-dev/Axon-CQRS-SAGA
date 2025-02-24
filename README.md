@@ -9,6 +9,8 @@
 #### Eureka Discovery Client
 #### Spring Cloud Gateway
 #### Axon Server Version : 2024.2.3
+#### Spring Boot Validation
+#### Mysql Version : 8.0.33
 
 ---
 
@@ -31,3 +33,12 @@
 ~~~
 docker run --name axonserver -p 8024:8024 -p 8124:8124 -v "[YourLocalPath]/data":/data -v "[YourLocalPath]/eventdata":/eventdata -v "[YourLocalPath]/config":/config axoniq/axonserver:2024.2.3
 ~~~
+
+### <u>CQRS</u>
+#### Implement CQRS pattern using Axon Framework in this microservice architecture.
+#### The CQRS pattern is a software design pattern that separates the read and write sides of an application, allowing for better scalability and maintainability.
+### <u>Validation</u>
+#### The validation pattern is a software design pattern that ensures that data is validated before it is processed, which can help prevent errors and improve the reliability of the system.
+#### Includes Rest API validation using Spring Boot Validation
+#### Includes Command Handler Validation using Axon Message Dispatch Interceptor
+#### And how to handle errors and rollback transactions using Axon Framework
